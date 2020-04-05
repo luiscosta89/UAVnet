@@ -1,10 +1,11 @@
 /**
- *  \file   q-learning-plus.c
+ *  \file   qlearningplus.c
  *  \brief  Q-Learning Plus Protocol
  *  \author Luis Antonio Costa
  *  \date   2020
  **/
 #include <stdio.h>
+#include <unistd.h>
 #include <include/modelutils.h>
 
 
@@ -24,10 +25,12 @@ model_t model =  {
 /* ************************************************** */
 /* ************************************************** */
 
-/* Defining node type */
+/* Defining node type and constants */
 #define SENSOR 0
 #define SOURCE 1
 #define GROUND 2
+
+#define MAX 500
 
 /* ************************************************** */
 /* ************************************************** */
@@ -51,6 +54,11 @@ struct entitydata {
   double q;
 };
 
+/* Q-Table */
+struct qtable {
+	int state;
+	int action[MAX][MAX];
+};
 
 /* ************************************************** */
 /* ************************************************** */
@@ -71,7 +79,7 @@ void neighbor_discovery(){
 
 /* Q-Learning Plus */
 int q_learning_plus(){
-	return 0
+	return 0;
 }
 
 /* Routing decision function */
@@ -350,6 +358,9 @@ void rx(call_t *c, packet_t *packet) {
 
       nodedata->last_seq = header->seq;
       TX(&c0, packet);
+      
+      printf("Waiting 5 seconds to send next package...\n");
+      sleep(5);      
       
       nodedata->packet_tx++;
       

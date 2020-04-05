@@ -31,17 +31,17 @@
 <!--
  == APPLICATION ===================================================== 
 -->
-<entity name="qlearning-source" library="application_qlearning">
+<entity name="qlearning-source" library="application_qlearningplus">
 	<init p="0.3" q="1"/>
 	<default type="1" period="2s"/>
 </entity>
 
-<entity name="qlearning-sensor" library="application_qlearning">
+<entity name="qlearning-sensor" library="application_qlearningplus">
 	<init p="0.3" q="1"/>
 	<default type="0"/>
 </entity>
 
-<entity name="qlearning-ground" library="application_qlearning">
+<entity name="qlearning-ground" library="application_qlearningplus">
 	<init p="0.3" q="1"/>
 	<default type="2"/>
 </entity>
