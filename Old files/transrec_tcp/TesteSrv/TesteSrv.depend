@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1443148625 source:d:\bruno\cic\2015.2\redes\labs\lab3\trabalhos\esqueleto_transrec_tcp\testesrv\testesrv.cpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<unistd.h>
+	<winsock2.h>
+	<WS2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+

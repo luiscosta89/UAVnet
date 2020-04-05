@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1443148717 source:d:\bruno\cic\2015.2\redes\labs\lab3\trabalhos\esqueleto_transrec_tcp\testecli\testecli.cpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<time.h>
+	<unistd.h>
+	<winsock2.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+
