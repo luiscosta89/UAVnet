@@ -18,6 +18,11 @@ directory:
 ```
 $ sudo make install
 ```
+- You can add the WSNet install directory in the search path by adding the following entries in ~/.bashrc:
+```
+$ PATH=$PATH:/usr/local/wsnet-2.0/bin
+$ export PATH
+```
 Then, first create and move to the working directory by typing the following commands:
 ```
 $ mkdir $HOME/wsnet-module/
@@ -27,12 +32,11 @@ Second, move the user_models folder to your HOME directory.
 Finally, we have to setup the WSNET_MODDIR environment variable by adding the following lines in
 $HOME/.bashrc file:
 ```
-export WSNET_MODDIR=$HOME/wsnet-module/lib
+$ export WSNET_MODDIR=$HOME/wsnet-module/lib
 ```
-You must copy q-learning-plus.c within the $HOME/
-wsnet-module/user_modules/ directory.
+You must copy qlearningplus.c within the $HOME/wsnet-module/user_modules/ directory.
 
-To compile epidemic.c type the following commands:
+To compile qlearningplus.c type the following commands:
 ```
 $ ./bootstrap
 $ ./configure --prefix=$HOME/wsnet-module --with-wsnet-dir=/usr/local/wsnet-2.0
@@ -49,5 +53,5 @@ $ ls $HOME/wsnet-module/lib/
 ```
 To run the simulation, type the following command:
 ```
-$ wsnet -c q-learning-plus.xml
+$ wsnet -c qlearningplus.xml
 ```
