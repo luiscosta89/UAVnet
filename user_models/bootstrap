@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case `uname -s` in
+    FreeBSD)
+		glibtoolize
+    aclocal19
+    autoheader259
+    automake19 --add-missing --foreign --copy
+    autoconf259
+    ;;
+
+    *)
+		libtoolize
+    aclocal
+    autoheader
+    automake --add-missing --foreign --copy
+    autoconf
+    ;;
+esac
